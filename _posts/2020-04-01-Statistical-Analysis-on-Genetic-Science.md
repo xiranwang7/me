@@ -1,9 +1,9 @@
-Statistical Analysis on Genetic Science
-================
 
 This work shows the statistical analysis on sloving some genetic problems, such as detecting Mendelian Inconsistency due to potential genotyping error in every genetic marker for every offspring, performing gene association test using the cleaned genotype data generated from offspring, and identifing genetic markers that are associated with weight adjusting for faid and sex.
 
 ### 1 Setup Dataset
+
+Dataset is avaliable at <https://github.com/xiranwang7/Genetic-Analysis>.
 
 Data Description:
 faid: Father's ID (0 indicates founder)
@@ -19704,7 +19704,9 @@ M2 \_ M4
 Two plots show the relationships for children's weight against different father ids and weight against children's sex. Based on graph, there are possible variations for weight among different father ids and children's sex.
 
 ``` r
-par(mfrow=c(2,2))
+par(mfrow=c(1,2))
+par(mar=c(2,2,2,2))
+
 ## Plot shows that there are differences in weight for different father id and sex. 
 plot(factor(sort_consistency$faid),sort_consistency$weight,col=2:11, 
      xlab = c("Father id"), ylab=c('Children weight'))
