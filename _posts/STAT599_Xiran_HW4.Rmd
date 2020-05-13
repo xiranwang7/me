@@ -1,0 +1,135 @@
+---
+title: "Homework4"
+author: "Xiran Wang"
+date: "2/25/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r include=FALSE}
+hdata.url <- "http://people.stat.sc.edu/hoyen/STAT599/Data/hdata.txt"
+hdata <- read.table(file=hdata.url, header=T, sep="\t")
+names(hdata)
+
+
+m1=paste(hdata$m11,hdata$m12)
+m2=paste(hdata$m21,hdata$m22)
+m3=paste(hdata$m31,hdata$m32)
+m4=paste(hdata$m41,hdata$m42)
+m5=paste(hdata$m51,hdata$m52)
+
+```
+
+
+###2
+```{r}
+fmsURL <- 'http://people.stat.sc.edu/hoyen/STAT599/Data/FMS_data.txt' 
+fms<-read.delim(file=fmsURL, header=TRUE, sep="\t")
+
+str.table <- prop.table( table(fms$actn3_1671064, fms$Race),2 )
+
+str.table
+
+```
+
+
+###3 
+####3.1
+P-vlaue for GT is 0.9996, so the we don't have enough evidence to reject H_null$(\beta_1=0)$ at 0.05 significant level.  P-vlaue TT is 0.11 , so the we don't have enough evidence to reject H_null  $(\beta_2=0)$ at 0.05 significant level. 
+```{r}
+fit1 <- lm( NDRM.CH ~ factor( akt2_2304186),data = fms )
+summary(fit1)[4]
+```
+
+####3.2
+P vlaues for GA and GG are 0.104  and 0.110 repectively, so the we don't have enough evidence to reject H_nulls(beta1 = 0 and beta2=0 respectively]) at 0.05 significant level. 
+
+```{r}
+fit2 <- lm( NDRM.CH ~factor( akt2_7254617),data = fms )
+summary(fit2)[4]
+```
+
+
+####3.3
+P vlaues for GA and GG are 0.25  and 0.549 repectively, so the we don't have enough evidence to reject H_ulls(beta1 = 0 and beta2=0 repectively) at 0.05 significant level. 
+
+```{r}
+fit3 <- lm( NDRM.CH ~factor( akt2_969531),data = fms )
+summary(fit3)[4]
+```
+
+
+####3.4
+P vlaues for CT and TT are 0.764  and 0.168 repectively, so the we don't have enough evidence to reject H_ulls(beta1 = 0 and beta2=0 repectively) at 0.05 significant level. 
+
+```{r}
+fit4 <- lm( NDRM.CH ~factor(akt2_rs892118),data = fms )
+summary(fit4)[4]
+```
+
+
+
+
+
+##4
+```{r}
+dat2<-fms[ which( fms['resistin_c180g']=='CC' |fms['resistin_c180g']=='GG'),]
+
+### homozygous variant (GG) has samller frequence --1
+### homozygous wildtype (CC) has larger frequence --0
+homozygous <- ifelse(dat2$resistin_c180g =='GG', 1,0 )
+bmi <- ifelse (dat2$pre.BMI >25,1,0)
+
+logit<-glm(bmi~homozygous,family=binomial(link=logit))
+summary(logit)
+```
+
+the odds of BMI>25 is larger for homozygous variant (GG) (homozygous = 1 ) comparing to  homozygous wildtype (CC) (homozygous = 0 ).
+
+\begin{align*}
+log[\frac{p }{1-p}] = -0.294 + 0.007 * homozygous \\
+when\ \   homozygous &= 0,\ \  odds = \frac{p}{1-p} = e^{-0.294} =0.745\\
+when\ \   homozygous &= 1,\ \  odds = \frac{p}{1-p} = e^{-0.294 + 0.007} = e{-0.287} =0.751\\
+\end{align*}
+
+\begin{align*}
+where\ \  0 &= homozygous\  wildtype (CC)\\
+      1 &= homozygous\  variant (GG) \\
+      0 &= (IBM <=25)\\
+      1 &= (IBM >25)\\
+      P &= probability\ \  of\ \  BMI >25\\
+\end{align*}
+
+
+
+
+###5
+P-vlaue=0.184, don't reject H_null at 0.05 significant level, so it is in Hardy-Weinberg equilibrium.  However, after stratified by the variable Race, the p-values are quite larger for each race group.
+```{r message=FALSE, warning=FALSE}
+library(HardyWeinberg)
+akt1<- table(fms$akt1_t10726c_t12868c)
+HWChisq(akt1,verbose=TRUE)
+```
+
+```{r message=FALSE, warning=FALSE}
+af<-table(fms$akt1_t10726c_t12868c[ which(fms$Race=='African Am') ] )
+as<-table(fms$akt1_t10726c_t12868c[which(fms$Race=='Asian') ] )
+cau<-table(fms$akt1_t10726c_t12868c[which(fms$Race=='Caucasian') ] )
+his<-table(fms$akt1_t10726c_t12868c[which(fms$Race=='Hispanic') ] )
+other<-table(fms$akt1_t10726c_t12868c[which(fms$Race=='Other') ] )
+
+HWChisq(af,verbose=TRUE)
+HWChisq(as,verbose=TRUE)
+HWChisq(cau,verbose=TRUE)
+HWChisq(his,verbose=TRUE)
+HWChisq(other,verbose=TRUE)
+
+```
+
+
+
+
