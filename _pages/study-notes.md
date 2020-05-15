@@ -1,7 +1,10 @@
 ---
 title: Study Notes
+layout: categories
 permalink: /study-notes/
+author_profile: true
 ---
+
 
 All of Xiran's data science study notes in one place.
 
