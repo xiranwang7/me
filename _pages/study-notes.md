@@ -1,6 +1,6 @@
 ---
 title: Study Notes
-layout: categories
+
 permalink: /study-notes/
 author_profile: true
 ---
