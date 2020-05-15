@@ -3,6 +3,8 @@ main:
     url: /posts/
   - title: "Categories"
     url: /categories/
+  - title: "Study Notes"
+    url: /study-notes/
   #- title: "Tags"
   #  url: /tags/
   - title: "About Me"
