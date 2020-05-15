@@ -55,18 +55,51 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-author:
-  name   : "Xiran Wang"
-  avatar : "https://raw.githubusercontent.com/xiranwang7/My-Website/master/xiran.jpg"
-  bio    : " Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.  -Steve Jobs"
-  links:
-    - label: "LinkedIn"
-      icon: "fas fa-fw fa-link"
-      url: "https://www.linkedin.com/in/xiran-wang-4b6715158/"
+#author:
+#  name   : "Xiran Wang"
+#  avatar : "https://raw.githubusercontent.com/xiranwang7/My-Website/master/xiran.jpg"
+#  bio    : " Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.  -Steve Jobs"
+#  links:
+#    - label: "LinkedIn"
+#      icon: "fas fa-fw fa-link"
+#      url: "https://www.linkedin.com/in/xiran-wang-4b6715158/"
 
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/xiranwang7"
+#    - label: "GitHub"
+#      icon: "fab fa-fw fa-github"
+#      url: "https://github.com/xiranwang7"
+
+
+# Site Author
+author:
+  name             : "Xiran Wang"
+  avatar           : "https://raw.githubusercontent.com/xiranwang7/My-Website/master/xiran.jpg"
+  bio              : "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.  -Steve Jobs"
+  location         : 
+  email            :
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : "xiranwang7"
+  google_plus      :
+  keybase          :
+  instagram        :
+  lastfm           :
+  linkedin         : "xiran-wang-4b6715158"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
+  steam            :
+  tumblr           :
+  twitter          : 
+  vine             :
+  weibo            :
+  xing             :
+  youtube          : 
+  
 
 #footer:
 #  links:
