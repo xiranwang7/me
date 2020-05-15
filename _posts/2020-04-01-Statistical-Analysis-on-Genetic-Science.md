@@ -1,19 +1,20 @@
-
 ---
 title: "Statistical Analysis on Genetic Science"
 date: 2020-04-18T15:34:30-04:00
 categories:
   - Data Analysis/Modeling
-
+#tags:
+# - Jekyll
+# - update
 ---
 
 
 
-This work shows the statistical analysis on sloving some genetic problems, such as detecting Mendelian Inconsistency due to potential genotyping error in every genetic marker for every offspring, performing gene association test using the cleaned genotype data generated from offspring, and identifing genetic markers that are associated with weight adjusting for faid and sex.
+This work shows the statistical analysis on solving some genetic problems, such as detecting Mendelian Inconsistency due to potential genotyping error in every genetic marker for every offspring, performing gene association test using the cleaned genotype data generated from offspring, and identifying genetic markers that are associated with weight adjusting for Father's ID and sex.
 
 ### 1 Setup Dataset
 
-Dataset is avaliable at <https://github.com/xiranwang7/Genetic-Analysis>.
+Dataset is available at <https://github.com/xiranwang7/Genetic-Analysis>.
 
 Data Description:
 faid: Father's ID (0 indicates founder)
