@@ -1,6 +1,6 @@
 ---
 title: Study Notes
-
+layout: tags
 permalink: /study-notes/
 author_profile: true
 ---
