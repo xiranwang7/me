@@ -19,7 +19,7 @@ description:
   
 #twitter_username: username
 github_username: xiranwang7
-minimal_mistakes_skin: default
+minimal_mistakes_skin: contrast
 search: true
 
 # Build settings
