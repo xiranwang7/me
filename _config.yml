@@ -16,9 +16,12 @@
 title: Xiran's Data Science World
 email: Xiranwangwork@gmail.com
 description: 
+words_per_minute         : false
+
   
 #twitter_username: username
 github_username: xiranwang7
+theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: contrast
 search: true
 
