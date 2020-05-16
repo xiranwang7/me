@@ -21,7 +21,7 @@ words_per_minute         : false
   
 #twitter_username: username
 github_username: xiranwang7
-theme: minimal-mistakes-jekyll
+theme: jekyll-theme-minimal
 minimal_mistakes_skin: "default"
 search: true
 
