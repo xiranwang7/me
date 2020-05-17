@@ -23,7 +23,7 @@ description:
 #twitter_username: username
 github_username: xiranwang7
 #theme: jekyll-theme-minimal
-minimal_mistakes_skin:  contrast #"default"
+minimal_mistakes_skin:  default
 search: true
 
 # Build settings
