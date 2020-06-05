@@ -1,6 +1,6 @@
 main:
-  - title: "Technical works"
-    url: /posts/
+#  - title: "Technical works"
+#    url: /posts/
   - title: "Categories"
     url: /categories/
   - title: "Study Notes"
