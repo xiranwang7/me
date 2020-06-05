@@ -1,8 +1,8 @@
 main:
   - title: "Technical works"
     url: /categories/
-  - title: "Categories"
-    url: /categories/
+#  - title: "Categories"
+#    url: /categories/
   - title: "Study Notes"
     url: /study-notes/
   #- title: "Tags"
